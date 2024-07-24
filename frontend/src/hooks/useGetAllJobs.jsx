@@ -11,7 +11,9 @@ const useGetAllJobs = () => {
         const fetchJobs = async () => {
             try {
                 axios.defaults.withCredentials = true;
-                const res = await axios.get(`https://jobportal-7xgd.onrender.com/api/v1/job/all?keyword=${searchText}`);
+                const res = await axios.get(`https://jobportal-7xgd.onrender.com/api/v1/job/all?keyword=${searchText}`, {
+                    withCredentials: true
+                });
                
                 if (res.data.success) {
                     dispatch(setAllJobs(res.data.jobs));
