@@ -23,7 +23,7 @@ app.use(urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
     // origin:"http://localhost:5173",
-    origin:["https://job-portal-eight-eta.vercel.app/", "https://job-portal-kartiksinduras-projects.vercel.app/", "https://job-portal-git-main-kartiksinduras-projects.vercel.app/"],
+    origin:["https://job-portal-eight-eta.vercel.app", "https://job-portal-kartiksinduras-projects.vercel.app", "https://job-portal-git-main-kartiksinduras-projects.vercel.app", "http://localhost:5173"],
     credentials:true
 }
 app.use(cors(corsOptions));

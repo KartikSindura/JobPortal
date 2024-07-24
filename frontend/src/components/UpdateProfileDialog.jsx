@@ -50,7 +50,7 @@ export function UpdateProfileDialog({ open, setOpen }) {
 
         try {
             dispatch(setLoading(true));
-            const res = await axios.post(`${process.env.BACKEND_BASE_URL}/api/v1/user/profile/update`, formData, {
+            const res = await axios.post(`https://jobportal-7xgd.onrender.com/api/v1/user/profile/update`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },

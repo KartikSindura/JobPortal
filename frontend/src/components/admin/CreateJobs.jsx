@@ -38,7 +38,7 @@ const CreateJobs = () => {
         e.preventDefault();
         try {
             dispatch(setLoading(true));
-            const res = await axios.post(`${process.env.BACKEND_BASE_URL}/api/v1/job/postjob`, input, {
+            const res = await axios.post(`https://jobportal-7xgd.onrender.com/api/v1/job/postjob`, input, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
